@@ -6,6 +6,5 @@ using Dapper;
 
 
 public static class BD{
-
- private static string _connectionString = @"Server=localhost; DataBase=JJOO; Trusted_Connection=True;";
+ private static string _connectionString = @"Server=localhost; DataBase=PreguntadOrt; Trusted_Connection=True;";
 }

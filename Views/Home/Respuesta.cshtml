@@ -1,0 +1,18 @@
+@{
+    ViewBag.Title = "Respuesta";
+    var esCorrecta = ViewBag.EsCorrecta;
+    var respuestaCorrecta = ViewBag.RespuestaCorrecta;
+}
+
+<h2>@(esCorrecta ? "¡Correcto!" : "Incorrecto")</h2>
+
+@if (!esCorrecta)
+{
+    <div style="font-size: 1.5em; color: red;">
+        <p>La respuesta correcta era: <strong>@respuestaCorrecta</strong></p>
+    </div>
+}
+
+<div style="margin-top: 20px;">
+    <a href='@Url.Action("Home", "Jugar")' style="font-size: 1.2em; padding: 10px 20px; text-decoration: none; color: white; background-color: green; border-radius: 5px;">Jugar Siguiente Pregunta</a>
+</div>

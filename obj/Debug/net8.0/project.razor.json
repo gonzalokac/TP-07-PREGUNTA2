@@ -19329,6 +19329,11 @@
   "RootNamespace": "TP_07_PREGUNTA2",
   "Documents": [
     {
+      "FilePath": "z:\\Prog tp07\\TP-07-PREGUNTA2\\Views\\Home\\Respuesta.cshtml",
+      "TargetPath": "Views\\Home\\Respuesta.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "z:\\Prog tp07\\TP-07-PREGUNTA2\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

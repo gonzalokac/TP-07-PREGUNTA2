@@ -1,0 +1,36 @@
+@{
+    ViewBag.Title = "Configurar Juego";
+}
+
+<h2>Configurar Juego</h2>
+
+<form action='@Url.Action("Comenzar", "Configurarjuego")' method="get">
+    <div>
+        <label for="dificultad">Dificultad:</label>
+        <select id="dificultad" name="dificultad" required>
+            <option value="-1">Todas</option>
+            <option value="1">Fácil</option>
+            <option value="2">Media</option>
+            <option value="3">Difícil</option>
+        </select>
+    </div>
+    <div>
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" name="categoria" required>
+            <option value="-1">Todas</option>
+            <option value="1">Historia</option>
+            <option value="2">Geografía</option>
+            <option value="3">Ciencia</option>
+            <option value="4">Deportes</option>
+        </select>
+    </div>
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+    </div>
+    <div>
+        <button type="submit">Jugar</button>
+    </div>
+</form>
+```
+

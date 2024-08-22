@@ -18,6 +18,20 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Configurarjuego()
+    {
+        return View();
+    }
+    public IActionResult Juegar()
+    {
+        return View();
+    }
+    
+public IActionResult Comenzar(string username, int dificultad, int categoria)
+    {
+        return View();
+    }
+
     public IActionResult Privacy()
     {
         return View();
