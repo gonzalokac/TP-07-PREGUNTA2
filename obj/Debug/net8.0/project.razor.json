@@ -19344,6 +19344,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "z:\\Prog tp07\\TP-07-PREGUNTA2\\Views\\Home\\Juego.cshtml",
+      "TargetPath": "Views\\Home\\Juego.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "z:\\Prog tp07\\TP-07-PREGUNTA2\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
@@ -19356,6 +19361,11 @@
     {
       "FilePath": "z:\\Prog tp07\\TP-07-PREGUNTA2\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "z:\\Prog tp07\\TP-07-PREGUNTA2\\Views\\Fin.cshtml",
+      "TargetPath": "Views\\Fin.cshtml",
       "FileKind": "mvc"
     },
     {
