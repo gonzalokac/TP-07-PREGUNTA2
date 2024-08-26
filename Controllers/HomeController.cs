@@ -22,7 +22,7 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Juegar()
+    public IActionResult Jugar()
     {
         return View();
     }
