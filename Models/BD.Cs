@@ -11,7 +11,7 @@ public static class BD{
     List<Categoria>Lcategoria=new List<Categoria>();
     using(SqlConnection db= new SqlConnection(_connectionString)){
         string sql= "SELECT * FROM Categorias ";
-        Lcategoria=db.Query<Categoria>(sql).ToList();
+        LCategoria=db.Query<Categoria>(sql).ToList();
 
     }
  }
