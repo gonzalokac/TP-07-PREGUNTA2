@@ -21,6 +21,7 @@ public class HomeController : Controller
     public IActionResult Configurarjuego()
     {
         return View();
+       
     }
     public IActionResult Jugar()
     {

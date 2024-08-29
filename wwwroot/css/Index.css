@@ -1,21 +1,51 @@
-
 body {
-    background-color: #f8f9fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background-color: #358d3d; /* Color de fondo oscuro */
+    background-image: url('Logo.png'); /* Usa una URL válida o un archivo local */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    background-size: 50%; /* Reduce el tamaño de la imagen al 50% del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center;
 }
-.container {
-    text-align: center;
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 0.5s;
 }
-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-.btn-primary {
+
+.btn-comenzar {
+    background-color: #28a745;
+    border: none;
+    padding: 15px 30px;
     font-size: 1.5rem;
-    padding: 10px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 50px;
+    opacity: 0;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: fadeIn 1s ease-in-out forwards 2s; /* Aparece después del título */
+}
+
+.btn-comenzar:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+}
+
+.btn-comenzar:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -1,3 +1,4 @@
+using  TP_07_PREGUNTA2.Models;
 public class Juego{
 
  static string NombreUsuario {get;set;}
@@ -10,30 +11,32 @@ static List<Pregunta> preguntas {get;set;}
 
 static List<Respuesta> respuestas {get;set;}
 
-/*InicializarJuego(){
-NombreUsuario.set("");
-puntajeActual.set(0);
-cantidadPreguntasCorrectas(0);
+public void InicializarJuego(){
+    NombreUsuario = "";
+    puntajeActual= 0;
+    cantidadPreguntasCorrectas=0;
 
 
 }
- static string ObtenerCategorias(string Lcategoria){
-Lcategoria=LCategoria;
-return Lcategoria;
+static string ObtenerCategorias(string Lcategoria){
+    Lcategoria=Lcategoria;
+    return Lcategoria;
 } 
 static string ObtenerDificultades(string Ldificultades){
-Ldificultades=LDificultades;
+Ldificultades=Ldificultades;
 return Ldificultades;
 
 }
 
-CargarPartida(string NombreUsuario, int dificultad, int categoria){
-
+public static string CargarPartida(string NombreUsuario, int dificultad, int categoria){
+return NombreUsuario;
 
 }
 
-ObtenerProximaPregunta(){
-
+public Pregunta ObtenerProximaPregunta(){
+  /*esto hay que hacer quedevuelva una pregunta*/
+   return new Pregunta();
+   
 }
 public  void ObtenerProximasRespuestas(int idPregunta){
 
