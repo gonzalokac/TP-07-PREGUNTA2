@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rzRGKuVC1eYCB23dFfne6xXVo06jH3K+M8VJ4NFiXZ9qY1SEiIHBi5VnR0cJP7zrMRuDRMkoZ8iGFVyumHVPMw==",
+  "dgSpecHash": "gbDrnYoxZD6WdOVPEYr9T9vBOhW60r1j+wV1Mr2paXNzIF1oCDLIvOa4fEkE+FGcM6UF724+XPm4mHdOiWYXkQ==",
   "success": true,
-  "projectFilePath": "Z:\\Prog tp07\\TP-07-PREGUNTA2-1\\TP-07-PREGUNTA2.csproj",
+  "projectFilePath": "Z:\\Tp prog 07 v3\\TP-07-PREGUNTA2\\TP-07-PREGUNTA2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\48045290\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\48045290\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

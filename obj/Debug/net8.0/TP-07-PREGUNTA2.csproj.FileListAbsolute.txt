@@ -50,3 +50,15 @@ Z:\Prog tp07\TP-07-PREGUNTA2-1\obj\Debug\net8.0\TP-07-PREGUNTA2.sourcelink.json
 Z:\Prog tp07\TP-07-PREGUNTA2-1\obj\Debug\net8.0\TP-07-PREGUNTA2.dll
 Z:\Prog tp07\TP-07-PREGUNTA2-1\obj\Debug\net8.0\refint\TP-07-PREGUNTA2.dll
 Z:\Prog tp07\TP-07-PREGUNTA2-1\obj\Debug\net8.0\TP-07-PREGUNTA2.pdb
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\TP-07-PREGUNTA2.csproj.AssemblyReference.cache
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\TP-07-PREGUNTA2.GeneratedMSBuildEditorConfig.editorconfig
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\TP-07-PREGUNTA2.AssemblyInfoInputs.cache
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\TP-07-PREGUNTA2.AssemblyInfo.cs
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\TP-07-PREGUNTA2.csproj.CoreCompileInputs.cache
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\TP-07-PREGUNTA2.MvcApplicationPartsAssemblyInfo.cache
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\TP-07-PREGUNTA2.RazorAssemblyInfo.cache
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\TP-07-PREGUNTA2.RazorAssemblyInfo.cs
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\TP-07-PREGUNTA2.sourcelink.json
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\TP-07-PREGUNTA2.dll
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\refint\TP-07-PREGUNTA2.dll
+Z:\Tp prog 07 v3\TP-07-PREGUNTA2\obj\Debug\net8.0\TP-07-PREGUNTA2.pdb

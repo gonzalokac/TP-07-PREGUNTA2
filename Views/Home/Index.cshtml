@@ -1,9 +1,62 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿﻿@{
+    ViewData["Title"] = "Principal";
 }
 
-<div class="text-center">
-    <h1 class="display-4">PREGUNTADOS: FOOTBALL EDITION</h1>
-    <img src="img/Logo.jpg">             
-       <a href="/Home/ConfigurarJuego" class="btn btn-primary">Comenzar!</a>   
+<style>
+    .listadescriptiva img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 2px solid #7742E2;
+        transition: transform 0.3s;
+    }
+    .listadescriptiva img:hover {
+        transform: scale(1.05);
+    }
+    ol {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    ol li {
+        margin: 10px;
+    }
+    ol li a {
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #FF6347;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    ol li a:hover {
+        background-color: #FFD700;
+        color: #121212;
+    }
+</style>
+<div class="container">
+    <div class="row listadescriptiva mb-4">
+        <div class="col-md-4 mb-3">
+            <img src="~/img/casinoentrada.jpg" alt="Casino Entrada" class="ImagenDesc">
+        </div>
+        <div class="col-md-4 mb-3">
+            <img src="~/img/boveda.jpg" alt="Bóveda" class="ImagenDesc">
+        </div>
+        <div class="col-md-4 mb-3">
+            <img src="~/img/casinoadentro.jpg" alt="Casino Adentro" class="ImagenDesc">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <ol>
+                <li><a href='@Url.Action("Tutorial", "Home")'>Tutorial</a></li>
+                <li><a href='@Url.Action("Comenzar", "Home")'>Comenzar</a></li>
+                <li><a href='@Url.Action("Creditos", "Home")'>Créditos</a></li>
+            </ol>
+        </div>
+    </div>
 </div>
