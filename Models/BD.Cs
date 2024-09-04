@@ -39,7 +39,7 @@ public static class BD{
 
  }
  }
- public static void ObtenerRespuestas(List <Pregunta>LPregunta){
+ public static void ObtenerRespuestas(List<Pregunta>LPregunta){
  List<Respuesta>LRespuesta=new List<Respuesta>();
   string sql="";
   using(SqlConnection db= new SqlConnection(_connectionString)){

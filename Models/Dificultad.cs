@@ -17,8 +17,3 @@ public Dificultad (int idDificultad,string Nombre){
     
 
 }
-public Dificultad (){
-
-}
-
-}

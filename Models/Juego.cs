@@ -34,30 +34,33 @@ return NombreUsuario;
 }
 
 public Pregunta ObtenerProximaPregunta(){
-  /*esto hay que hacer quedevuelva una pregunta*/
    return new Pregunta();
    
 }
 public  void ObtenerProximasRespuestas(int idPregunta){
-
+    
+return new Respuesta();
 }
  public bool VerificarRespuesta(int idPregunta, int idRespuesta)
     {
-        // Lógica para verificar si la respuesta es correcta
-        // Este es un ejemplo simple; en una aplicación real, usarías una base de datos o alguna lógica más compleja
-        // Supongamos que tenemos una estructura que guarda las respuestas correctas
         var respuestaCorrecta = ObtenerRespuestaCorrecta(idPregunta);
-        return idRespuesta == respuestaCorrecta.Id;
+        if(idRespuesta=respuestaCorrecta){
+             puntajeActual+=1;
+             cantidadPreguntasCorrectas+=1;
+             LPreguntas.RemoveAt(idPregunta-1)
+             return True
+        }else{
+        return False
+        }
+       
     }
 
     // Este método obtiene la respuesta correcta para una pregunta dada
     public Respuesta ObtenerRespuestaCorrecta(int idPregunta)
     {
-        // Lógica para obtener la respuesta correcta para la pregunta dada
-        // Este es un ejemplo simple; en una aplicación real, esto probablemente se obtendría de una base de datos
-        // Ejemplo estático de respuesta correcta
-        return new Respuesta { Id = 2, Texto = "Respuesta Correcta" }; // Debes ajustar esto según tu implementación
+     new Respuesta R=ObtenerRespuestas(idPregunta)
+        return R;
+
     }
 }
-
 
