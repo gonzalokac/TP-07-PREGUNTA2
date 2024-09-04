@@ -1,36 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\tp prog 07 v3\\TP-07-PREGUNTA2\\TP-07-PREGUNTA2.csproj": {}
+    "C:\\Users\\Usuario\\Downloads\\TP-07-PREGUNTA2-1\\TP-07-PREGUNTA2.csproj": {}
   },
   "projects": {
-    "Z:\\tp prog 07 v3\\TP-07-PREGUNTA2\\TP-07-PREGUNTA2.csproj": {
+    "C:\\Users\\Usuario\\Downloads\\TP-07-PREGUNTA2-1\\TP-07-PREGUNTA2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\tp prog 07 v3\\TP-07-PREGUNTA2\\TP-07-PREGUNTA2.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Downloads\\TP-07-PREGUNTA2-1\\TP-07-PREGUNTA2.csproj",
         "projectName": "TP-07-PREGUNTA2",
-        "projectPath": "Z:\\tp prog 07 v3\\TP-07-PREGUNTA2\\TP-07-PREGUNTA2.csproj",
-        "packagesPath": "C:\\Users\\48045290\\.nuget\\packages\\",
-        "outputPath": "Z:\\tp prog 07 v3\\TP-07-PREGUNTA2\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Downloads\\TP-07-PREGUNTA2-1\\TP-07-PREGUNTA2.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Downloads\\TP-07-PREGUNTA2-1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\48045290\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -38,16 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "dapper": {
               "target": "Package",
@@ -77,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

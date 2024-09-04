@@ -43,11 +43,11 @@ return new Respuesta();
 }
  public bool VerificarRespuesta(int idPregunta, int idRespuesta)
     {
-        var respuestaCorrecta = ObtenerRespuestaCorrecta(idPregunta);
-        if(idRespuesta=respuestaCorrecta){
+        Respuesta respuestaCorrecta = ObtenerRespuestaCorrecta(idPregunta);
+        if(idRespuesta==respuestaCorrecta){
              puntajeActual+=1;
              cantidadPreguntasCorrectas+=1;
-             LPreguntas.RemoveAt(idPregunta-1)
+             LPreguntas.RemoveAt(idPregunta)
              return True
         }else{
         return False
@@ -58,8 +58,14 @@ return new Respuesta();
     // Este método obtiene la respuesta correcta para una pregunta dada
     public Respuesta ObtenerRespuestaCorrecta(int idPregunta)
     {
-     new Respuesta R=ObtenerRespuestas(idPregunta)
-        return R;
+    new List <Respuesta> LRespuesta=ObtenerRespuestas(idPregunta);
+    foreach(var r in LRespuesta){
+
+        if(r.Correcta==True){
+              return r;
+        }
+    }
+      
 
     }
 }
