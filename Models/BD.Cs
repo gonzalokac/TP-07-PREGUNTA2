@@ -8,10 +8,10 @@ using Dapper;
 public static class BD{
  private static string _connectionString = @"Server=localhost; DataBase=PreguntadOrt; Trusted_Connection=True;";
  public static void ObtenerCategorias(){
-    List<Categoria>Lcategoria=new List<Categoria>();
+    List<Categoria> Lcategoria=new List<Categoria>();
     using(SqlConnection db= new SqlConnection(_connectionString)){
         string sql= "SELECT * FROM Categorias ";
-        LCategoria=db.Query<Categoria>(sql).ToList();
+        Lcategoria=db.Query<Categoria>(sql).ToList();
 
     }
  }
@@ -45,6 +45,8 @@ public static class BD{
   using(SqlConnection db= new SqlConnection(_connectionString)){
     foreach(var pregunta in LPregunta){
         sql= "SELECT * FROM Respuestas WHERE idPregunta= " + pregunta.idPregunta;
+        // hay que ejecurar el sql y hacer el to list a la lista de RESPUESTAS
+        LRespuesta=db.Query<Respuesta>(sql).ToList();
         LRespuesta.AddRange(sql);
 
     }
