@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\TP-07-PREGUNTA2.props" />
-</Project>
