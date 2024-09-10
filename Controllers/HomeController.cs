@@ -25,6 +25,8 @@ public class HomeController : Controller
     }
     public IActionResult Jugar()
     {
+        Pregunta pregunta=Juego.ObtenerProximaPregunta();
+        ViewBag.pregunta=pregunta;
         return View();
     }
     
@@ -40,7 +42,7 @@ public IActionResult Comenzar(string username, int dificultad, int categoria)
     }
 
     [HttpPost]
-    public IActionResult Verificarrespuesta(int idPregunta, int idRespuesta)
+    public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta)
     {
        
         bool esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
