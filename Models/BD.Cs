@@ -41,17 +41,33 @@ public static class BD{
  }
  public static List<Respuesta> ObtenerRespuestas(List<Pregunta> LPregunta){
  List<Respuesta>LRespuesta=new List<Respuesta>();
+ List<Respuesta>LRespuestaFinal=new List<Respuesta>();
   string sql="";
   using(SqlConnection db= new SqlConnection(_connectionString)){
     foreach(var pregunta in LPregunta){
         sql= "SELECT * FROM Respuestas WHERE idPregunta= " + pregunta.idPregunta;
         // hay que ejecurar el sql y hacer el to list a la lista de RESPUESTAS
         LRespuesta=db.Query<Respuesta>(sql).ToList();
-        LRespuesta.AddRange(sql);
+
+        LRespuestaFinal.AddRange(LRespuesta);
 
     }
-              LRespuesta=db.Query<Respuesta>(sql).ToList();
   }
   return LRespuesta;
+ }
+ public static List<Respuesta> ObtenerRespuestaXId(int idPregunta){
+List<Respuesta>LRespuesta=new List<Respuesta>();
+  string sql="";
+  using(SqlConnection db= new SqlConnection(_connectionString)){
+   
+        sql= "SELECT * FROM Respuestas WHERE idPregunta= " + idPregunta;
+        // hay que ejecurar el sql y hacer el to list a la lista de RESPUESTAS
+        LRespuesta=db.Query<Respuesta>(sql).ToList();
+
+
+    
+  }
+  return LRespuesta;
+
  }
  }

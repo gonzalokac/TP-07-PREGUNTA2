@@ -27,5 +27,5 @@ public class Respuesta{
         
 
     }
-
+    public Respuesta(){}
 }

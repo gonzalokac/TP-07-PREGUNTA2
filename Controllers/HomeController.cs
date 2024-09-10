@@ -30,7 +30,7 @@ public class HomeController : Controller
     
 public IActionResult Comenzar(string username, int dificultad, int categoria)
     {
-        CargarPartida();
+        Juego.CargarPartida( username,  dificultad,  categoria);
         return View();
     }
 
@@ -40,13 +40,13 @@ public IActionResult Comenzar(string username, int dificultad, int categoria)
     }
 
     [HttpPost]
-    public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta)
+    public IActionResult Verificarrespuesta(int idPregunta, int idRespuesta)
     {
        
-        bool esCorrecta = _juego.VerificarRespuesta(idPregunta, idRespuesta);
+        bool esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
         
         // Obtén la respuesta correcta para la pregunta (esto depende de cómo esté implementado tu método)
-        var respuestaCorrecta = _juego.ObtenerRespuestaCorrecta(idPregunta);
+        var respuestaCorrecta = Juego.ObtenerRespuestaCorrecta(idPregunta);
         
         // Usa ViewBag para enviar la información a la vista
         ViewBag.EsCorrecta = esCorrecta;
