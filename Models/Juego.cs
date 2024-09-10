@@ -1,72 +1,83 @@
-using  TP_07_PREGUNTA2.Models;
-public class Juego{
+using TP_07_PREGUNTA2.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
- static string NombreUsuario {get;set;}
+public class Juego
+{
+    static string NombreUsuario { get; set; }
+    static int PuntajeActual { get; set; }
+    static int CantidadPreguntasCorrectas { get; set; }
+    static List<Pregunta> Preguntas { get; set; }
+    static List<Respuesta> Respuestas { get; set; }
 
-static int puntajeActual {get;set;}
+    public Juego()
+    { InicializarJuego();
+    }
 
-static int cantidadPreguntasCorrectas {get;set;}
+    public void InicializarJuego()
+    {
+        NombreUsuario = "";
+        PuntajeActual = 0;
+        CantidadPreguntasCorrectas = 0;
+        Preguntas = new List<Pregunta>();
+        Respuestas = new List<Respuesta>();
+    }
 
-static List<Pregunta> preguntas {get;set;}
+    public static string ObtenerCategorias(string categoria)
+    {
+        // Aquí puedes tener lógica para procesar categorías si es necesario
+        return categoria;
+    }
 
-static List<Respuesta> respuestas {get;set;}
+    public static string ObtenerDificultades(string dificultad)
+    {
+        // Aquí puedes tener lógica para procesar dificultades si es necesario
+        return dificultad;
+    }
 
-public void InicializarJuego(){
-    NombreUsuario = "";
-    puntajeActual= 0;
-    cantidadPreguntasCorrectas=0;
+    public static string CargarPartida(string nombreUsuario, int dificultad, int categoria)
+    {
+        NombreUsuario = nombreUsuario;
+        // Aquí debes implementar la lógica para cargar la partida con dificultad y categoría
+        // Por ejemplo: recuperar preguntas y respuestas de una base de datos según dificultad y categoría
+        return NombreUsuario;
+    }
 
+    public Pregunta ObtenerProximaPregunta()
+    {
+        // Implementa la lógica para obtener la siguiente pregunta. Ejemplo: devolver la primera pregunta y luego eliminarla.
+        if (Preguntas.Count > 0)
+        {
+            return Preguntas.First();
+        }
+        return null;
+    }
 
-}
-static string ObtenerCategorias(string Lcategoria){
-    Lcategoria=Lcategoria;
-    return Lcategoria;
-} 
-static string ObtenerDificultades(string Ldificultades){
-Ldificultades=Ldificultades;
-return Ldificultades;
+    public List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
+    {
+        // Asegúrate de que BD.ObtenerRespuestas esté implementado correctamente
+        // y devuelva respuestas relacionadas con el idPregunta
+        return BD.ObtenerRespuestas(idPregunta);
+    }
 
-}
-
-public static string CargarPartida(string NombreUsuario, int dificultad, int categoria){
-return NombreUsuario;
-
-}
-
-public Pregunta ObtenerProximaPregunta(){
-   return new Pregunta();
-   
-}
-public  void ObtenerProximasRespuestas(int idPregunta){
-    
-return new Respuesta();
-}
- public bool VerificarRespuesta(int idPregunta, int idRespuesta)
+    public bool VerificarRespuesta(int idPregunta, int idRespuesta)
     {
         Respuesta respuestaCorrecta = ObtenerRespuestaCorrecta(idPregunta);
-        if(idRespuesta==respuestaCorrecta){
-             puntajeActual+=1;
-             cantidadPreguntasCorrectas+=1;
-             LPreguntas.RemoveAt(idPregunta)
-             return True
-        }else{
-        return False
+        if (respuestaCorrecta != null && respuestaCorrecta.Id == idRespuesta)
+        {
+            PuntajeActual += 1;
+            CantidadPreguntasCorrectas += 1;
+            Preguntas.RemoveAll(p => p.Id == idPregunta); // Remover la pregunta correctamente
+            return true;
         }
-       
+        return false;
     }
 
-    // Este método obtiene la respuesta correcta para una pregunta dada
     public Respuesta ObtenerRespuestaCorrecta(int idPregunta)
     {
-    new List <Respuesta> LRespuesta=ObtenerRespuestas(idPregunta);
-    foreach(var r in LRespuesta){
-
-        if(r.Correcta==True){
-              return r;
-        }
-    }
-      
-
+        // Asegúrate de que BD.ObtenerRespuestas esté implementado y devuelva respuestas correctas
+        List<Respuesta> respuestas = BD.ObtenerRespuestas(idPregunta);
+        return respuestas.FirstOrDefault(r => r.Correcta);
     }
 }
-

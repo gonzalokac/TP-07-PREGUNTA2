@@ -1,0 +1,13 @@
+.personal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .personal img
+  {
+    width: 40%;
+    padding-top: 75px;
+    
+  
+  }

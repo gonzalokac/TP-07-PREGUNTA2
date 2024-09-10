@@ -1,0 +1,9 @@
+Z:\AAAA PROG TP2\TP-07-PREGUNTA2\obj\Debug\net7.0\TP-07-PREGUNTA2.csproj.AssemblyReference.cache
+Z:\AAAA PROG TP2\TP-07-PREGUNTA2\obj\Debug\net7.0\TP-07-PREGUNTA2.GeneratedMSBuildEditorConfig.editorconfig
+Z:\AAAA PROG TP2\TP-07-PREGUNTA2\obj\Debug\net7.0\TP-07-PREGUNTA2.AssemblyInfoInputs.cache
+Z:\AAAA PROG TP2\TP-07-PREGUNTA2\obj\Debug\net7.0\TP-07-PREGUNTA2.AssemblyInfo.cs
+Z:\AAAA PROG TP2\TP-07-PREGUNTA2\obj\Debug\net7.0\TP-07-PREGUNTA2.csproj.CoreCompileInputs.cache
+Z:\AAAA PROG TP2\TP-07-PREGUNTA2\obj\Debug\net7.0\TP-07-PREGUNTA2.MvcApplicationPartsAssemblyInfo.cache
+Z:\AAAA PROG TP2\TP-07-PREGUNTA2\obj\Debug\net7.0\TP-07-PREGUNTA2.RazorAssemblyInfo.cache
+Z:\AAAA PROG TP2\TP-07-PREGUNTA2\obj\Debug\net7.0\TP-07-PREGUNTA2.RazorAssemblyInfo.cs
+Z:\AAAA PROG TP2\TP-07-PREGUNTA2\obj\Debug\net7.0\TP-07-PREGUNTA2.sourcelink.json

@@ -30,6 +30,7 @@ public class HomeController : Controller
     
 public IActionResult Comenzar(string username, int dificultad, int categoria)
     {
+        CargarPartida();
         return View();
     }
 
