@@ -29,22 +29,30 @@ return Ldificultades;
 
 }
 
-public static string CargarPartida(string NombreUsuario, int dificultad, int categoria){
-return NombreUsuario;
-
+public static bool CargarPartida(string NombreUsuario, int dificultad, int categoria){
+preguntas=BD.ObtenerPreguntas( dificultad, categoria);
+respuestas=BD.ObtenerRespuestas(preguntas);
+if(preguntas!=null){
+    return true;
+} else{
+    return false;
 }
+}
+/* Para que necesito El nombre del usuario??*/
 
-public Pregunta ObtenerProximaPregunta(){
+public static Pregunta ObtenerProximaPregunta(){
  
     Random random=new Random();
     int indice=random.Next(preguntas.Count);
     Pregunta preg=preguntas[indice];
+    preguntas.RemoveAt(indice);
    return preg;
    
 }
-public static Respuesta ObtenerProximasRespuestas(int idPregunta){
-    
-return new Respuesta();
+public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta){
+    List<Respuesta>LRespuestaPregunta=new List<Respuesta>();
+    LRespuestaPregunta=BD.ObtenerRespuestaXId(idPregunta);
+    return LRespuestaPregunta;
 }
  public static bool VerificarRespuesta(int idPregunta, int idRespuesta)
     {

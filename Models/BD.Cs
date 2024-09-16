@@ -24,7 +24,7 @@ public static class BD{
     }
 
  }
- public static void ObtenerPreguntas(int dificultad, int categoria ){
+ public static List<Pregunta> ObtenerPreguntas(int dificultad, int categoria ){
    List<Pregunta>LPregunta=new List<Pregunta>();
    string sql="";
     using(SqlConnection db= new SqlConnection(_connectionString)){
@@ -34,10 +34,8 @@ public static class BD{
         LPregunta=db.Query<Pregunta>(sql).ToList();
 
 
-
-
-
  }
+ return LPregunta;
  }
  public static List<Respuesta> ObtenerRespuestas(List<Pregunta> LPregunta){
  List<Respuesta>LRespuesta=new List<Respuesta>();

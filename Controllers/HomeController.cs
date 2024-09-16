@@ -25,18 +25,40 @@ public class HomeController : Controller
     }
     public IActionResult Jugar()
     {
+         List<Respuesta>LRespuestaPregunta=new List<Respuesta>();
         Pregunta pregunta=Juego.ObtenerProximaPregunta();
-        ViewBag.pregunta=pregunta;
+        if(pregunta!=null){
+        ViewBag.Pregunta=pregunta;
+        LRespuestaPregunta=Juego.ObtenerProximasRespuestas(pregunta.idPregunta);
+        ViewBag.LRespuestaPregunta=LRespuestaPregunta;
+        return JUEGO();
+    } else{
+        return Fin();
+    }
+    
+    
+    }
+    /* se hace algo en controller juego? */
+       public IActionResult JUEGO()
+    {
         return View();
     }
     
 public IActionResult Comenzar(string username, int dificultad, int categoria)
-    {
-        Juego.CargarPartida( username,  dificultad,  categoria);
-        return View();
+    { bool check;
+        check=Juego.CargarPartida( username,  dificultad,  categoria);
+        if(check==true){
+            return Jugar();
+        }else{
+            return Configurarjuego();
+        }
     }
 
     public IActionResult Privacy()
+    {
+        return View();
+    }
+       public IActionResult Fin()
     {
         return View();
     }
