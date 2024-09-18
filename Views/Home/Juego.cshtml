@@ -2,3 +2,24 @@
     ViewData["Title"] = "Juego";
 }
 
+@{
+    ViewBag.Title = "Pregunta Juego";
+}
+
+<h2>Pregunta x de  Juego</h2>
+
+<form action='@Url.Action("VerificarRespuesta", "JUEGO")' method="get">
+    <div>
+    <input type="hidden" name="idPregunta" value="@ViewBag.Pregunta.idPregunta">
+        <label for="idRespuesta">@ViewBag.Pregunta.Enunciado:</label>
+        <select id="idRespuesta" name="idRespuesta" required>
+
+            <option value="1">Todas</option>
+            <option value="2">Fácil</option>
+            <option value="3">Media</option>
+            <option value="4">Difícil</option>
+        </select>
+   
+        <button type="submit">YaElegí</button>
+    </div>
+</form>
