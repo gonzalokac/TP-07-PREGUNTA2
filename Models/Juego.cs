@@ -4,7 +4,7 @@ public class Juego{
 
  static string NombreUsuario {get;set;}
 
-static int puntajeActual {get;set;}
+public static int puntajeActual {get;set;}
 
 static int cantidadPreguntasCorrectas {get;set;}
 
@@ -56,9 +56,9 @@ public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta){
 }
  public static bool VerificarRespuesta(int idPregunta, int idRespuesta)
     {
-        int respuestaCorrecta = ObtenerRespuestaCorrecta(idPregunta);
+        Respuesta respuestaCorrecta = ObtenerRespuestaCorrecta(idPregunta);
          
-        if(idRespuesta==respuestaCorrecta){
+        if(idRespuesta==respuestaCorrecta.idRespuesta){
              puntajeActual+=1;
              cantidadPreguntasCorrectas+=1;
              return true;
@@ -69,17 +69,20 @@ public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta){
     }
 
     // Este método obtiene la respuesta correcta para una pregunta dada
-    public static int ObtenerRespuestaCorrecta(int idPregunta)
-    {
-         List<Respuesta>LRespuestaPregunta2=new List<Respuesta>();
-        LRespuestaPregunta2=Juego.ObtenerProximasRespuestas(pregunta.idPregunta);
-    foreach(var r in LRespuestaPregunta2){
+   public static Respuesta ObtenerRespuestaCorrecta(int idPregunta)
+{
+    List<Respuesta> LRespuestaPregunta2 = Juego.ObtenerProximasRespuestas(idPregunta);
 
-        if(r.Correcta==1){
-              return r.idRespuesta;
+    foreach (Respuesta r in LRespuestaPregunta2)
+    {
+        if (r.Correcta)
+        {
+            return r;
         }
     }
-     
-    }
+    
+    // Si no se encuentra una respuesta correcta, devolver null después del bucle.
+    return null;
+}
 }
 

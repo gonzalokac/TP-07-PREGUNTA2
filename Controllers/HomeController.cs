@@ -43,6 +43,11 @@ public class HomeController : Controller
     {
         return View();
     }
+
+     public IActionResult Respuesta()
+    {
+        return View();
+    }
     
 public IActionResult Comenzar(string username, int dificultad, int categoria)
     { bool check;
@@ -52,6 +57,7 @@ public IActionResult Comenzar(string username, int dificultad, int categoria)
         }else{
             return Configurarjuego();
         }
+        ViewBag.username=username;
     }
 
     public IActionResult Privacy()
@@ -66,10 +72,9 @@ public IActionResult Comenzar(string username, int dificultad, int categoria)
     [HttpPost]
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta)
     {
-      Respuesta respuestaCorrecta= new Respuesta();
+    
         bool esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
-           
-        respuestaCorrecta.idRespuesta = Juego.ObtenerRespuestaCorrecta(idPregunta);
+             Respuesta respuestaCorrecta = Juego.ObtenerRespuestaCorrecta(idPregunta);
         
         ViewBag.EsCorrecta = esCorrecta;
         ViewBag.RespuestaCorrecta = respuestaCorrecta;
@@ -77,7 +82,7 @@ public IActionResult Comenzar(string username, int dificultad, int categoria)
         
        
   
-        return View("Respuesta");}
+        return Respuesta();}
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

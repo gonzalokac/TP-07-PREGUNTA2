@@ -1,0 +1,18 @@
+using TP_07_PREGUNTA2.Models;
+
+@{
+    ViewData["Title"] = "Fin";
+    
+    int puntaje =Juego.puntajeActual;
+     
+     
+       
+}
+<form action='@Url.Action("Comenzar", "Configurarjuego")' method="get">
+<div>
+<h2>@ViewBag.username<h2>
+<h2>@puntaje<h2>
+
+ <button type="submit">Jugar</button>
+</div>
+</form>

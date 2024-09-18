@@ -5,7 +5,7 @@
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v7.0": {
+    ".NETCoreApp,Version=v8.0": {
       "TP-07-PREGUNTA2/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
