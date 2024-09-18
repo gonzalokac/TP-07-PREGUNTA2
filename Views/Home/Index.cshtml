@@ -11,7 +11,9 @@
 <body>
     <div class="container text-center d-flex align-items-center justify-content-center min-vh-100">
         <div>
-            <button class="btn btn-lg btn-comenzar mt-5">Comenzar</button>
+       <form action='@Url.Action("ConfigurarJuego", "Home")' method="post">
+    <button type="submit" class="btn btn-lg btn-comenzar mt-5">Comenzar</button>
+</form>
         </div>
     </div>
     
