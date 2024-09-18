@@ -25,7 +25,7 @@ public class HomeController : Controller
     }
     public IActionResult Jugar()
     {
-         List<Respuesta>LRespuestaPregunta=new List<Respuesta>();
+         List<Respuesta> LRespuestaPregunta=new List<Respuesta>();
         Pregunta pregunta=Juego.ObtenerProximaPregunta();
         if(pregunta!=null){
         ViewBag.Pregunta=pregunta;
@@ -66,17 +66,17 @@ public IActionResult Comenzar(string username, int dificultad, int categoria)
     [HttpPost]
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta)
     {
-       
+      Respuesta respuestaCorrecta= new Respuesta();
         bool esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
+           
+        respuestaCorrecta.idRespuesta = Juego.ObtenerRespuestaCorrecta(idPregunta);
         
-        // Obtén la respuesta correcta para la pregunta (esto depende de cómo esté implementado tu método)
-        var respuestaCorrecta = Juego.ObtenerRespuestaCorrecta(idPregunta);
-        
-        // Usa ViewBag para enviar la información a la vista
         ViewBag.EsCorrecta = esCorrecta;
         ViewBag.RespuestaCorrecta = respuestaCorrecta;
 
-        // Retorna la vista Respuesta
+        
+       
+  
         return View("Respuesta");}
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

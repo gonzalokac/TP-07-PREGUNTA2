@@ -61,7 +61,6 @@ public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta){
         if(idRespuesta==respuestaCorrecta){
              puntajeActual+=1;
              cantidadPreguntasCorrectas+=1;
-             preguntas.RemoveAt(idPregunta);
              return true;
         }else{
         return false;
@@ -72,15 +71,15 @@ public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta){
     // Este método obtiene la respuesta correcta para una pregunta dada
     public static int ObtenerRespuestaCorrecta(int idPregunta)
     {
-     respuestas=BD.ObtenerRespuestaXId(idPregunta);
-    foreach(var r in respuestas){
+         List<Respuesta>LRespuestaPregunta2=new List<Respuesta>();
+        LRespuestaPregunta2=Juego.ObtenerProximasRespuestas(pregunta.idPregunta);
+    foreach(var r in LRespuestaPregunta2){
 
-        if(r.Correcta==true){
+        if(r.Correcta==1){
               return r.idRespuesta;
         }
     }
-      return -1;
-
+     
     }
 }
 

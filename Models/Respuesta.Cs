@@ -1,8 +1,6 @@
 namespace TP_07_PREGUNTA2.Models;
 
 
-
-
 public class Respuesta{
 
     public int idPregunta {get;set;}
@@ -27,5 +25,4 @@ public class Respuesta{
         
 
     }
-    public Respuesta(){}
 }
