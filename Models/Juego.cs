@@ -46,6 +46,7 @@ public static Pregunta ObtenerProximaPregunta(){
     int indice=random.Next(preguntas.Count);
     Pregunta preg=preguntas[indice];
     preguntas.RemoveAt(indice);
+    
    return preg;
    
 }

@@ -6,7 +6,7 @@ using TP_07_PREGUNTA2.Models;
     
     int puntaje =Juego.puntajeActual;
      
-    
+       if (@puntaje>=10){
         <img src = "/img/Victoria.png" width= 60% height = 50%>
     <form action='@Url.Action("Comenzar", "Configurarjuego")' method="get">
         <div>
@@ -15,8 +15,10 @@ using TP_07_PREGUNTA2.Models;
             <button type="submit">Jugar de nuevo</button>
         </div>
     </form>
-     
-        <img src = "/img/Derrota.png" width= 60% height = 50%>
+     }
+     else{
+
+<img src = "/img/Derrota.png" width= 60% height = 50%>
         <form action='@Url.Action("Comenzar", "Configurarjuego")' method="get">
         <div>
             <h2>@ViewBag.username</h2>
@@ -24,6 +26,9 @@ using TP_07_PREGUNTA2.Models;
             <button type="submit">Jugar de nuevo</button>
         </div>
     </form>
+
+     }
+        
     
     
        
