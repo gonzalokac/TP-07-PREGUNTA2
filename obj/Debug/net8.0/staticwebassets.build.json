@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WHRxqQX/HFM4cYSEH7UV6DltwGBoZvo5P6YH3/3v5z0=",
+  "Hash": "hSX1IChPXZFjVr8sl7p1xi5ehpuFlOf4zLK4XEf8j7I=",
   "Source": "TP-07-PREGUNTA2",
   "BasePath": "_content/TP-07-PREGUNTA2",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net7.0\\scopedcss\\bundle\\TP-07-PREGUNTA2.styles.css",
+      "Identity": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TP-07-PREGUNTA2.styles.css",
       "SourceId": "TP-07-PREGUNTA2",
       "SourceType": "Computed",
-      "ContentRoot": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/TP-07-PREGUNTA2",
       "RelativePath": "TP-07-PREGUNTA2.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net7.0\\scopedcss\\bundle\\TP-07-PREGUNTA2.styles.css"
+      "OriginalItemSpec": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net8.0\\scopedcss\\bundle\\TP-07-PREGUNTA2.styles.css"
     },
     {
-      "Identity": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\TP-07-PREGUNTA2.bundle.scp.css",
+      "Identity": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TP-07-PREGUNTA2.bundle.scp.css",
       "SourceId": "TP-07-PREGUNTA2",
       "SourceType": "Computed",
-      "ContentRoot": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/TP-07-PREGUNTA2",
       "RelativePath": "TP-07-PREGUNTA2.bundle.scp.css",
       "AssetKind": "All",
@@ -52,7 +52,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\TP-07-PREGUNTA2.bundle.scp.css"
+      "OriginalItemSpec": "Z:\\TP-07-PREGUNTA2-1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\TP-07-PREGUNTA2.bundle.scp.css"
     },
     {
       "Identity": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\css\\creditos.css",
@@ -150,25 +150,6 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\img\\¡Victoria!!.png",
-      "SourceId": "TP-07-PREGUNTA2",
-      "SourceType": "Discovered",
-      "ContentRoot": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\",
-      "BasePath": "_content/TP-07-PREGUNTA2",
-      "RelativePath": "img/¡Victoria!!.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\¡Victoria!!.png"
-    },
-    {
       "Identity": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\img\\Corona.png",
       "SourceId": "TP-07-PREGUNTA2",
       "SourceType": "Discovered",
@@ -186,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Corona.png"
+    },
+    {
+      "Identity": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\img\\Correcto.png",
+      "SourceId": "TP-07-PREGUNTA2",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\",
+      "BasePath": "_content/TP-07-PREGUNTA2",
+      "RelativePath": "img/Correcto.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Correcto.png"
     },
     {
       "Identity": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\img\\Derrota.png",
@@ -245,6 +245,25 @@
       "OriginalItemSpec": "wwwroot\\img\\Iair.jfif"
     },
     {
+      "Identity": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\img\\Incorrecto.png",
+      "SourceId": "TP-07-PREGUNTA2",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\",
+      "BasePath": "_content/TP-07-PREGUNTA2",
+      "RelativePath": "img/Incorrecto.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Incorrecto.png"
+    },
+    {
       "Identity": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\img\\Logo.png",
       "SourceId": "TP-07-PREGUNTA2",
       "SourceType": "Discovered",
@@ -281,6 +300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Thumbs.db"
+    },
+    {
+      "Identity": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\img\\Victoria.png",
+      "SourceId": "TP-07-PREGUNTA2",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\",
+      "BasePath": "_content/TP-07-PREGUNTA2",
+      "RelativePath": "img/Victoria.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Victoria.png"
     },
     {
       "Identity": "Z:\\TP-07-PREGUNTA2-1\\wwwroot\\img\\Wilder.PNG",

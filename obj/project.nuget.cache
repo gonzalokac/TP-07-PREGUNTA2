@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8CsfzPhEZk3d5qORH24HXFLriENjmowQNlBDWBcS+YGffgkm0iyUBwUxdL1tZd4BE9jGaKIZIWHcvK5bLGgjMw==",
+  "dgSpecHash": "1xhNiHer0Iq8z0iAXrI7KmUKkIbHqHhs2TBmQStkjdYPrhhgvkH1oca2cZxSd6brpAYmXLxmz4e7XS6n7d5TeQ==",
   "success": true,
   "projectFilePath": "Z:\\TP-07-PREGUNTA2-1\\TP-07-PREGUNTA2.csproj",
   "expectedPackageFiles": [
@@ -13,11 +13,7 @@
     "C:\\Users\\48045290\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\48045290\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
     "C:\\Users\\48045290\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\48045290\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\48045290\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "C:\\Users\\48045290\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
-    "C:\\Users\\48045290\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
-    "C:\\Users\\48045290\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+    "C:\\Users\\48045290\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
