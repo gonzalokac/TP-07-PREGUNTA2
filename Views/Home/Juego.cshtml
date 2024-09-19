@@ -17,6 +17,8 @@ using TP_07_PREGUNTA2.Models;
 
 <form action='@Url.Action("VerificarRespuesta", "JUEGO")' method="get">
     <div>
+       
+    <img src="@ViewBag.Pregunta.Foto" />
    <label>@ViewBag.Pregunta.Enunciado:</label>
 
 <form method="post">
