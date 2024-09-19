@@ -511,11 +511,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\TP-07-PREGUNTA2\\TP-07-PREGUNTA2.csproj",
+      "projectUniqueName": "Z:\\TP-07-PREGUNTA2-1\\TP-07-PREGUNTA2.csproj",
       "projectName": "TP-07-PREGUNTA2",
-      "projectPath": "Z:\\TP-07-PREGUNTA2\\TP-07-PREGUNTA2.csproj",
+      "projectPath": "Z:\\TP-07-PREGUNTA2-1\\TP-07-PREGUNTA2.csproj",
       "packagesPath": "C:\\Users\\48045290\\.nuget\\packages\\",
-      "outputPath": "Z:\\TP-07-PREGUNTA2\\obj\\",
+      "outputPath": "Z:\\TP-07-PREGUNTA2-1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
