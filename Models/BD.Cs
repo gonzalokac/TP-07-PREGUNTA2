@@ -33,6 +33,7 @@ public static class BD{
         else {sql= "SELECT * FROM  Preguntas WHERE idDificultad= " + dificultad + "AND idCategoria=" + categoria;}
         LPregunta=db.Query<Pregunta>(sql).ToList();
 
+        
 
  }
  return LPregunta;

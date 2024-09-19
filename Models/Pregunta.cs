@@ -11,7 +11,10 @@ public class Pregunta{
     public string Enunciado {get;set;}
 
     public string Foto {get;set;}
+public Pregunta() { 
 
+    
+}
     public Pregunta (int idCategoria,string Enunciado,string Foto,int idPregunta,int idDificultad){
 
 

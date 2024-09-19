@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP-07-PREGUNTA2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11404ec9c6c9a44a2370b109ad8a9880f8a67b4a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d95ffcfe5c0d567cfe35f1d71d5821cba7721643")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP-07-PREGUNTA2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP-07-PREGUNTA2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

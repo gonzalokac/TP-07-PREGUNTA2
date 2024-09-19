@@ -6,7 +6,7 @@ public class Juego{
 
 public static int puntajeActual {get;set;}
 
-static int cantidadPreguntasCorrectas {get;set;}
+public static int cantidadPreguntasCorrectas {get;set;}
 
 static List<Pregunta> preguntas {get;set;}
 
@@ -84,5 +84,7 @@ public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta){
     // Si no se encuentra una respuesta correcta, devolver null después del bucle.
     return null;
 }
+
+public Juego() { }
 }
 

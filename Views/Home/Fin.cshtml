@@ -2,10 +2,11 @@ using TP_07_PREGUNTA2.Models;
 
 @{
     ViewData["Title"] = "Fin";
+
     
     int puntaje =Juego.puntajeActual;
      
-     if(cantidadPreguntasCorrectas = 10){
+    
         <img src = "/img/Victoria.png" width= 60% height = 50%>
     <form action='@Url.Action("Comenzar", "Configurarjuego")' method="get">
         <div>
@@ -14,7 +15,7 @@ using TP_07_PREGUNTA2.Models;
             <button type="submit">Jugar de nuevo</button>
         </div>
     </form>
-     }else(cantidadPreguntasCorrectas > 10){
+     
         <img src = "/img/Derrota.png" width= 60% height = 50%>
         <form action='@Url.Action("Comenzar", "Configurarjuego")' method="get">
         <div>
@@ -23,7 +24,7 @@ using TP_07_PREGUNTA2.Models;
             <button type="submit">Jugar de nuevo</button>
         </div>
     </form>
-     }
+    
     
        
 }
