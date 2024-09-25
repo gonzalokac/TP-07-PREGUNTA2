@@ -1,36 +1,18 @@
-using TP_07_PREGUNTA2.Models;
+@using TP_07_PREGUNTA2.Models;
 
 @{
     ViewData["Title"] = "Fin";
+}
 
-    
-    int puntaje =Juego.puntajeActual;
-     
-       if (@puntaje>=10){
-        <img src = "/img/Victoria.png" width= 60% height = 50%>
-    <form action='@Url.Action("Comenzar", "Configurarjuego")' method="get">
-        <div>
-            <h2>@ViewBag.username</h2>
-            <h2>@puntaje</h2>
-            <button type="submit">Jugar de nuevo</button>
-        </div>
-    </form>
-     }
-     else{
-
-<img src = "/img/Derrota.png" width= 60% height = 50%>
-        <form action='@Url.Action("Comenzar", "Configurarjuego")' method="get">
-        <div>
-            <h2>@ViewBag.username</h2>
-            <h2>@puntaje</h2>
-            <button type="submit">Jugar de nuevo</button>
-        </div>
-    </form>
-
-     }
+<img src = "/img/Victoria.png" width= 60% height = 50%>
+<div>
+    <h2>@ViewBag.username</h2>
+    <h2>@ViewBag.puntaje</h2>
+    <a href='@Url.Action("ConfigurarJuego", "Home")'>Jugar de nuevo</a>
+</div>
         
     
     
        
-}
+
 

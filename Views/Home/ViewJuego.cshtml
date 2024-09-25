@@ -1,0 +1,24 @@
+@using TP_07_PREGUNTA2.Models;
+@{
+    ViewData["Title"] = "Juego";
+    ViewBag.Title = "Pregunta Juego";
+}
+
+<div>
+    <img src="@ViewBag.Pregunta.Foto" />
+
+    <label>@ViewBag.Pregunta.Enunciado</label>
+
+    <form action='@Url.Action("VerificarRespuesta", "Home")' method="post">
+    <input type="hidden" name="idPregunta" value="@ViewBag.Pregunta.idPregunta">
+        @foreach(Respuesta resp in ViewBag.LRespuestaPregunta){
+            <button type="submit" name="idRespuesta" value="@resp.idRespuesta">@resp.Contenido</button>
+        }
+
+        <!-- 
+            <button type="submit" name="idRespuesta" value="1">@ViewBag.LRespuestaPregunta[0].Contenido</button>
+            <button type="submit" name="idRespuesta" value="2">@ViewBag.LRespuestaPregunta[1].Contenido</button>
+            <button type="submit" name="idRespuesta" value="3">@ViewBag.LRespuestaPregunta[2].Contenido</button>
+            <button type="submit" name="idRespuesta" value="4">@ViewBag.LRespuestaPregunta[3].Contenido</button> -->
+    </form>
+</div>

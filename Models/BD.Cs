@@ -16,28 +16,27 @@ public static class BD{
     }
  }
  public static void ObtenerDificultades(){
-    List<Dificultad>LDificultad=new List<Dificultad>();
-    using(SqlConnection db= new SqlConnection(_connectionString)){
-        string sql= "SELECT * FROM Dificultades ";
-        LDificultad=db.Query<Dificultad>(sql).ToList();
+	List<Dificultad>LDificultad=new List<Dificultad>();
+	using(SqlConnection db= new SqlConnection(_connectionString)){
+		string sql= "SELECT * FROM Dificultades ";
+		LDificultad=db.Query<Dificultad>(sql).ToList();
 
-    }
+	}
+}
 
- }
- public static List<Pregunta> ObtenerPreguntas(int dificultad, int categoria ){
-   List<Pregunta>LPregunta=new List<Pregunta>();
-   string sql="";
-    using(SqlConnection db= new SqlConnection(_connectionString)){
-        if(dificultad==-1){sql= "SELECT * FROM  Preguntas  WHERE idCategoria=" + categoria;}
-        else if (categoria==-1){sql= "SELECT * FROM  Preguntas WHERE idDificultad= " + dificultad;}
-        else {sql= "SELECT * FROM  Preguntas WHERE idDificultad= " + dificultad + "AND idCategoria=" + categoria;}
-        LPregunta=db.Query<Pregunta>(sql).ToList();
+public static List<Pregunta> ObtenerPreguntas(int dificultad, int categoria ){
+    using SqlConnection db = new SqlConnection(_connectionString);
+    List<Pregunta> LPregunta = new List<Pregunta>();
 
-        
+    if(dificultad == -1 && categoria == -1) LPregunta=db.Query<Pregunta>("SELECT * FROM Preguntas").ToList();
+    else if(dificultad == -1) LPregunta=db.Query<Pregunta>("SELECT * FROM Preguntas WHERE idCategoria=@pcategoria", new{pcategoria=categoria}).ToList();
+    else if (categoria == -1) LPregunta=db.Query<Pregunta>("SELECT * FROM Preguntas WHERE idDificultad=@pdificultad", new{pdificultad=dificultad}).ToList();
+    else LPregunta=db.Query<Pregunta>("SELECT * FROM Preguntas WHERE idDificultad=@pdificultad AND idCategoria=@pcategoria", new{pdificultad=dificultad,pcategoria=categoria}).ToList();
 
- }
- return LPregunta;
- }
+
+    return LPregunta;
+}
+
  public static List<Respuesta> ObtenerRespuestas(List<Pregunta> LPregunta){
  List<Respuesta>LRespuesta=new List<Respuesta>();
  List<Respuesta>LRespuestaFinal=new List<Respuesta>();
@@ -54,19 +53,10 @@ public static class BD{
   }
   return LRespuesta;
  }
- public static List<Respuesta> ObtenerRespuestaXId(int idPregunta){
-List<Respuesta>LRespuesta=new List<Respuesta>();
-  string sql="";
-  using(SqlConnection db= new SqlConnection(_connectionString)){
-   
-        sql= "SELECT * FROM Respuestas WHERE idPregunta= " + idPregunta;
-        // hay que ejecurar el sql y hacer el to list a la lista de RESPUESTAS
-        LRespuesta=db.Query<Respuesta>(sql).ToList();
 
-
-    
-  }
-  return LRespuesta;
-
- }
- }
+	public static List<Respuesta> ObtenerRespuestaXId(int idPregunta){
+		using SqlConnection db= new SqlConnection(_connectionString);
+		var a = db.Query<Respuesta>("SELECT * FROM Respuestas WHERE IdPregunta=@pidPregunta", new{pidPregunta=idPregunta}).ToList();
+		return a;
+	}
+}

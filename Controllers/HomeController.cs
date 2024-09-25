@@ -8,64 +8,36 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
+    public HomeController(ILogger<HomeController> logger) => _logger = logger;
+    public IActionResult Index() => View();
+    public IActionResult ConfigurarJuego() => View();
 
-    public IActionResult Index()
-    {
-        return View();
-    }
-
-    public IActionResult Configurarjuego()
-    {
-        return View();
-       
-    }
     public IActionResult Jugar()
     {
-         List<Respuesta> LRespuestaPregunta=new List<Respuesta>();
-        Pregunta pregunta=Juego.ObtenerProximaPregunta();
-        if(pregunta!=null){
-        ViewBag.Pregunta=pregunta;
-        LRespuestaPregunta=Juego.ObtenerProximasRespuestas(pregunta.idPregunta);
-        ViewBag.LRespuestaPregunta=LRespuestaPregunta;
-        return JUEGO();
-    } else{
-        return Fin();
-    }
-    
-    
-    }
-    /* se hace algo en controller juego? */
-       public IActionResult JUEGO()
-    {
-        return View();
-    }
+        ViewBag.Pregunta=Juego.ObtenerProximaPregunta();
 
-     public IActionResult Respuesta()
-    {
-        return View();
+        if(ViewBag.Pregunta != null){
+            ViewBag.LRespuestaPregunta=BD.ObtenerRespuestaXId(ViewBag.Pregunta.idPregunta);
+            return View("ViewJuego");
+        } else{
+            return RedirectToAction("Fin");
+        }    
     }
     
-public IActionResult Comenzar(string username, int dificultad, int categoria)
-    { bool check;
-        check=Juego.CargarPartida( username,  dificultad,  categoria);
-        if(check==true){
-            return Jugar();
-        }else{
-            return Configurarjuego();
-        }
+    public IActionResult Comenzar(string username, int dificultad, int categoria){
+        bool check = Juego.CargarPartida(username, dificultad, categoria);
         ViewBag.username=username;
+
+        return RedirectToAction(check ? "Jugar" : "ConfigurarJuego");
     }
 
-    public IActionResult Privacy()
-    {
+    public IActionResult Privacy() => View();
+
+    public IActionResult Fin(){
+        ViewBag.puntaje = Juego.puntajeActual;
         return View();
     }
-       public IActionResult Fin()
-    {
+      public IActionResult Creditos(){
         return View();
     }
 
@@ -74,19 +46,14 @@ public IActionResult Comenzar(string username, int dificultad, int categoria)
     {
     
         bool esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
-             Respuesta respuestaCorrecta = Juego.ObtenerRespuestaCorrecta(idPregunta);
+        Respuesta? respuestaCorrecta = Juego.ObtenerRespuestaCorrecta(idPregunta);
         
         ViewBag.EsCorrecta = esCorrecta;
         ViewBag.RespuestaCorrecta = respuestaCorrecta;
-
-        
-       
   
-        return Respuesta();}
+        return View("ViewRespuesta");
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
+    public IActionResult Error() => View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 }
