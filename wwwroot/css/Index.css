@@ -1,12 +1,8 @@
 body {
-    background-color: #358d3d; /* Color de fondo oscuro */
-    background-image: url('Logo.png'); /* Usa una URL válida o un archivo local */
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    background-size: 50%; /* Reduce el tamaño de la imagen al 50% del contenedor */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center;
+    background-color: #c55900; 
+   /* background-image: url('Logo.png'); /* Usa una URL válida o un archivo local */
+    color: #ffffff;
+  
 }
 
 h1 {

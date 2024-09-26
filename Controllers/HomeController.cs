@@ -27,7 +27,7 @@ public class HomeController : Controller
     public IActionResult Comenzar(string username, int dificultad, int categoria){
         bool check = Juego.CargarPartida(username, dificultad, categoria);
         ViewBag.username=username;
-
+      
         return RedirectToAction(check ? "Jugar" : "ConfigurarJuego");
     }
 
@@ -44,10 +44,11 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult VerificarRespuesta(int idPregunta, int idRespuesta)
     {
-    
+       
         bool esCorrecta = Juego.VerificarRespuesta(idPregunta, idRespuesta);
         Respuesta? respuestaCorrecta = Juego.ObtenerRespuestaCorrecta(idPregunta);
-        
+      
+     
         ViewBag.EsCorrecta = esCorrecta;
         ViewBag.RespuestaCorrecta = respuestaCorrecta;
   

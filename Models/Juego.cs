@@ -8,9 +8,11 @@ public static int puntajeActual {get;set;}
 
 public static int cantidadPreguntasCorrectas {get;set;}
 
-static List<Pregunta> preguntas {get;set;}
+public static List<Pregunta> preguntas {get;set;}
 
 static List<Respuesta> respuestas {get;set;}
+
+public static int cantPreguntas {get;set;}
 
 public static void InicializarJuego(){
     NombreUsuario = "";
@@ -21,7 +23,7 @@ public static void InicializarJuego(){
 public static bool CargarPartida(string NombreUsuario, int dificultad, int categoria){
     preguntas=BD.ObtenerPreguntas( dificultad, categoria);
     respuestas=BD.ObtenerRespuestas(preguntas);
-
+    cantPreguntas=preguntas.Count();
     return preguntas != null;
 }
 

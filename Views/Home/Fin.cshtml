@@ -4,12 +4,24 @@
     ViewData["Title"] = "Fin";
 }
 
+
+@if(@Juego.cantidadPreguntasCorrectas>@Juego.cantPreguntas*0.5){
+    
 <img src = "/img/Victoria.png" width= 60% height = 50%>
 <div>
     <h2>@ViewBag.username</h2>
-    <h2>@ViewBag.puntaje</h2>
+    <h2>PuntajeTotal:@ViewBag.puntaje</h2>
     <a href='@Url.Action("ConfigurarJuego", "Home")'>Jugar de nuevo</a>
 </div>
+  } else{
+ <img src = "/img/Derrota.png" width= 60% height = 50%>
+<div>
+    <h2>@ViewBag.username</h2>
+    <h2>PuntajeTotal:@ViewBag.puntaje</h2>
+    <a href='@Url.Action("ConfigurarJuego", "Home")'>Jugar de nuevo</a>
+</div>
+
+  }
         
     
     
