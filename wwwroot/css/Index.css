@@ -1,9 +1,17 @@
-body {
-    background-color: #c55900; 
-   /* background-image: url('Logo.png'); /* Usa una URL válida o un archivo local */
-    color: #ffffff;
-  
-}
+body {background-color:rgb(59, 160, 29);
+    
+    }  
+
+    footer{
+
+    text-align: center;
+    justify-content:center ;
+    margin-top: 20px ;
+    size: 200px;
+    }
+    img{
+        margin-top: 25px;
+    }
 
 h1 {
     font-family: 'Arial', sans-serif;
@@ -23,6 +31,7 @@ h1 {
     opacity: 0;
     transition: background-color 0.3s, transform 0.3s;
     animation: fadeIn 1s ease-in-out forwards 2s; /* Aparece después del título */
+    margin-bottom: 120px;
 }
 
 .btn-comenzar:hover {

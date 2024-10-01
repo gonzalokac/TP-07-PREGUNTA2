@@ -6,7 +6,7 @@ using Dapper;
 
 
 public static class BD{
- private static string _connectionString = @"Server=localhost; DataBase=PreguntadOrt; Trusted_Connection=True;";
+ private static string _connectionString = @"Server=DESKTOP-QL7CVVP\SQLEXPRESS; DataBase=PreguntadOrt; Trusted_Connection=True;";
  public static void ObtenerCategorias(){
     List<Categoria> Lcategoria=new List<Categoria>();
     using(SqlConnection db= new SqlConnection(_connectionString)){

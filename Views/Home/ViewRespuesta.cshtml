@@ -8,14 +8,14 @@
 <link href="Respuesta.css">
 @if (ViewBag.esCorrecta){
     <h2> Está Bien!! </h2>
-    <img src="/img/Correcto.png" />
+    <img src="/img/Correcto.png" class="img-fluid mb-4" />
 
     <div style="margin-top: 20px;">
         <a href='@Url.Action("Jugar", "Home")' style="font-size: 1.2em; padding: 10px 20px; text-decoration: none; color: white; background-color: green; border-radius: 5px;">Jugar Siguiente Pregunta</a>
     </div>
 } else {
     <div style="font-size: 1.5em; color: red;">
-        <img src="/img/Incorrecto.png" />
+        <img src="/img/Incorrecto.png" class="img-fluid mb-4" />
         <p>La respuesta correcta era: <strong>@respuestaCorrecta.Contenido</strong></p>
     </div>
 
