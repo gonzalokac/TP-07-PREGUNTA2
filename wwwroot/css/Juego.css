@@ -22,3 +22,10 @@ button{
      font-size: large;
      
 }
+
+#imagen{
+    text-align: center;
+    justify-content:center ;
+    height: 300px;
+    width: auto;
+}
